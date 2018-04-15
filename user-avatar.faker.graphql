@@ -1,0 +1,11 @@
+extend type Query {
+  avatar: Avatar
+}
+
+type Avatar {
+  #The original avatar URL
+  originalUrl: String @fake(type: avatarUrl, options: { imageCategory: people })
+  # The thumbnail resized to 64x64px
+  thumbnail64Url: String
+    @fake(type: imageUrl, options: { imageWidth: 64, randomizeImageUrl: true })
+}

@@ -1,0 +1,32 @@
+# This is sample IDL schema for GraphQL Faker in extend mode.
+#
+# In this mode Faker leverages IDL extend keyword.
+# Also you can use following two directives to enhance fake data:
+#   - @fake
+#   - @examples
+#
+# Press save or Cmd+Enter to apply the changes and update server. Switch to GraphiQL
+# on the left panel to immediately test your changes.
+#
+# Developed with ❤️ by APIs.guru | https://github.com/APIs-guru/graphql-faker
+
+extend type Root {
+  pet: Pet
+}
+
+type Pet {
+  name: String @fake(type:firstName)
+  image: String @fake(type:imageUrl, options: {imageCategory:cats})
+}
+
+type Avatar {
+  #The original avatar URL
+  originalUrl: String @fake(type:avatarUrl, options: { imageCategory: people })
+  # The thumbnail resized to 64x64px
+  thumbnail64Url: String @fake(type:imageUrl, options: { imageWidth:64, randomizeImageUrl:true})
+}
+
+extend type Person {
+  #The avatar of the user
+  avatar: Avatar
+}

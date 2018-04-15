@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js start --open --extend http://localhost:3000/graphql/queries
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js start --open ./ext-swapi.graphql --extend ./user-avatar.faker.graphql
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/prisc_000/.config/yarn/global/node_modules/.bin:/Users/prisc_000/code/flutter/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/prisc_000/.config/yarn/global/node_modules/.bin:/Users/prisc_000/code/flutter/bin:/usr/local/sbin:~/bin
@@ -25,7 +25,7 @@ npm manifest:
       "graphql-faker": "^1.7.0"
     },
     "scripts": {
-      "start": "graphql-faker"
+      "start": "yarn run graphql-faker"
     }
   }
 
@@ -748,7 +748,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c graphql-faker --open --extend http://localhost:3000/graphql/queries
+  Arguments: -c yarn run graphql-faker --open ./ext-swapi.graphql --extend ./user-avatar.faker.graphql
   Directory: /Users/prisc_000/code/BHYV/schema-extensions
   Output:
   

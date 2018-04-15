@@ -38,8 +38,10 @@ JSON.parse(localStorage.getItem("session")).accessToken;
 This will return a string that you need to copy and paste in the next command
 
 3.  Running an extension file:
+    [--co / --cors-origin](https://github.com/APIs-guru/graphql-faker/blob/master/README.md#options)
 
 ```shell
+yarn start --open --co --extend http://localhost:3000/graphql/queries ./user-avatar.faker.graphql
 npm start -- --open --extend [your GraphQL endpoint] --header "Authorization:Bearer [THE AUTH TOKEN YOU GOT]" ./example.faker.graphql
 ```
 
