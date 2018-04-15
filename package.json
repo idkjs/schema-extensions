@@ -9,6 +9,6 @@
     "graphql-faker": "^1.7.0"
   },
   "scripts": {
-    "start": "graphql-faker"
+    "start": "yarn run graphql-faker"
   }
 }
