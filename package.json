@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description":
     "A sample repository to extend GraphQL Schema with graphql-faker",
-  "repository": "git@github.com:chollier/schema-extensions.git",
+  "repository": "git@github.com:idkjs/schema-extensions.git",
   "license": "MIT",
   "dependencies": {
     "graphql-faker": "^1.7.0"
